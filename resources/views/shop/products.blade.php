@@ -1,0 +1,2 @@
+@extends('shop.layout')
+@section('content')<div class="row"><h1>Produtos</h1><a href="/admin">← Pedidos</a></div><section class="card card-body"><h2>Novo produto</h2>@include('shop.product-form',['product'=>null])</section><h2>Editar cardápio</h2><div class="grid">@forelse($products as $product)<details class="card card-body"><summary>{{ $product->name }} • {{ $product->active?'Disponível':'Indisponível' }}</summary>@include('shop.product-form') </details>@empty<p>Cadastre o primeiro produto acima.</p>@endforelse</div>@endsection

@@ -1,0 +1,2 @@
+@extends('shop.layout')
+@section('content')<section class="card card-body narrow"><span class="eyebrow">ÁREA DA EQUIPE</span><h1>Entrar no painel</h1><form method="post" action="/admin/login">@csrf<label>E-mail<input name="email" type="email" value="{{ old('email') }}" autocomplete="username" required></label><label>Senha<input type="password" name="password" autocomplete="current-password" required></label><button>Entrar</button></form></section>@endsection
